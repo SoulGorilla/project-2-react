@@ -1,11 +1,10 @@
 import "./App.css";
-import { useState, useEffect } from "react";
 import Currency from "./Components/Currency.js";
 import Nav from "./Components/Nav.js";
 import This from "./Components/This.js";
 import Footer from "./Components/Footer.js";
 import SignUp from "./Components/SignUp.js";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Routes, Route } from "react-router-dom";
 
 function App() {
   return (

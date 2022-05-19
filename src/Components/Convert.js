@@ -18,19 +18,19 @@ const Convert = props => {
   }, [props.money.currency]);
   if (loading) return <h1> Loading </h1>;
 
-  const List = () => {
-    for (const key in data.response.rates) {
-      console.log(`key is ${key}, value is ${data.response.rates[key]}`);
-      <div>
-        <h2>${key}</h2>
-      </div>;
-      return (
-        <div>
-          <h2>${key}</h2>
-        </div>
-      );
-    }
-  };
+  // const List = () => {
+  //   for (const key in data.response.rates) {
+  //     console.log(`key is ${key}, value is ${data.response.rates[key]}`);
+  //     <div>
+  //       <h2>${key}</h2>
+  //     </div>;
+  //     return (
+  //       <div>
+  //         <h2>${key}</h2>
+  //       </div>
+  //     );
+  //   }
+  // };
 
   return (
     <div>

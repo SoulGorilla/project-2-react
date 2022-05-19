@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div class="bijon">
@@ -13,10 +13,8 @@ const Footer = () => {
 
 export default Footer;
 
-{
-  /* <button class="btn btn-outline-success" type="link">
+/* <button class="btn btn-outline-success" type="link">
   <Link className="crncy" to="/about">
     Currency
   </Link>
 </button>; */
-}
