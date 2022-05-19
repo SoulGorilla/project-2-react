@@ -50,18 +50,20 @@ const Currency = () => {
           id="select"
           onChange={e => setCurrency(e.target.value)}
         >
-          ><option selected>Currency</option>
+          <option selected>Currency</option>
+          <option value="USD">US Dollar</option>
+          <option value="EUR">Euro</option>
+          <option value="GBP">British Pounds</option>
+          <option value="AUD">Aussie Dollars</option>
+          <option value="CAD">Canadian Dollars</option>
           <option value="RUB">Ruble</option>
-          <option value="USD">Dollar</option>
           <option value="AUD">AUD</option>
+          <option value="GBP">British Pounds</option>
         </select>
         <button className="btn btn-outline-success" type="submit">
           CONVERT!
         </button>
       </form>
-      <h1>
-        {money.currency} {money.money}
-      </h1>
       <ul class="list-group">
         <Convert money={money} />
       </ul>

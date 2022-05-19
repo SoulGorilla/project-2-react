@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const Nav = () => {
   return (
     <div>
-      <nav class="navbar navbar-expand-lg bg-light">
+      <nav class="navbar navbar-expand-lg  navbar-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             Currency
@@ -22,10 +22,10 @@ const Nav = () => {
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <Link to="/about">About Me</Link>
+                <Link to="/about">Currency</Link>
               </li>
               <li class="nav-item">
-                <Link to="/this">This test</Link>
+                <Link to="/this">About</Link>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -36,17 +36,17 @@ const Nav = () => {
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
-                  Dropdown
+                  List of Supported Currencies
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li>
                     <a class="dropdown-item" href="#">
-                      Action
+                      USD
                     </a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Another action
+                      Russian Rubles
                     </a>
                   </li>
                   <li>
@@ -54,26 +54,17 @@ const Nav = () => {
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">
-                      Something else here
+                      Euro's
                     </a>
                   </li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Disabled</a>
-              </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
+            <button class="btn btn-outline-success" type="link">
+              <Link className="crncy" to="/about">
+                Currency
+              </Link>
+            </button>
           </div>
         </div>
       </nav>
