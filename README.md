@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# Project Overview
+This is a currency converter for citizens of the U.S, Great Britain, Europe and Australia to use when traveling abroad.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Links
 
-## Available Scripts
+- [github repo link](https://github.com/SoulGorilla/project-2-react)
+- [deployment link](https://soulgorilla.github.io/project-2-react/#/about)
 
-In the project directory, you can run:
+## Project Description
+This webapp is a currency converter. It allows you to see what your money is worth in many different countries. It uses the styling from Mint.com and has many possibilities for advanced features including crypto conversions.
 
-### `npm start`
+## API
+It utilizes the CurrencyScoop APi which returns real-time and historical exchange rates for 168 world currencies.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```
+{
+"meta": {
+"code": 200,
+"disclaimer": "Usage subject to terms: https://currencyscoop.com/terms"
+},
+"response": {
+"date": "2022-05-13T17:37:43Z",
+"base": "USD",
+"rates": {
+"ADA": 1.80237082,
+"AED": 3.6725,
+"AFN": 87.80555901,
+"ALL": 116.19254389,
+"AMD": 458.36660798,
+"ANG": 1.78962933,
+"AOA": 406.43496403,
+}
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Wireframes
+- [Wireframe](https://res.cloudinary.com/dvhyslfb6/image/upload/v1652467049/Screen_Shot_2022-05-13_at_11.17.25_AM_sphqfl.png)
+- [React architecture](https://res.cloudinary.com/dvhyslfb6/image/upload/v1652474437/Screen_Shot_2022-05-13_at_1.40.17_PM_f6i6b5.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### MVP 
+- Find and use external api 
+- Render data on page 
+- show specific currencies based on fixed currency value
+- Have routes and 4 pages (3 currencies, 1 about)
 
-### `npm run build`
+#### PostMVP EXAMPLE
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Add "Traveling through the metaverse" page to show Crypto pairs in USD
+- Add ability to input both currency type and amount (removes 2 dedicated pages) onSubmit it shows dozens of currency amounts on Homepage.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Components
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components. 
 
-### `npm run eject`
+| Component | Description | 
+| --- | :---: |  
+| App | This will include React Router as well as a burger menu with links. It will include State to show which components to render.| 
+|Iterate Currencies| This component will make the initial data pull and use 2 states (currency and Amount) to pass to the API. It will then iterate through the return to disply only the pairs for GBP, Euro, and Ruble.
+|Currency | This component will build a list to display the data from Iterate currencies.
+|Currency Ruble |This will be built almost exactly the same as currency, but will pass different data on its' API request. [This Component will be deleted during if I hit my Stretch Goals]
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+| Header | This will render the header include the nav | 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Footer | This will render the header include the nav | 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
-## Learn More
+| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| --- | :---: |  :---: | :---: | :---: |
+| App | H | 5hrs| ? | ?|
+| Iterate Currencies | H | 3hrs| ? | ? |
+| Currency | H | 4hrs| ? | ? |
+| Currency Ruble | L | 1hrs| ? | ? |
+| Header | H | 2hrs| ? | ? |
+| Footer | H | .5hrs| ? | ? |
+| Total | H | 15.5hrs| ? | ?hrs |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Additional Libraries
+- Bootstrap
+- Jquery
+- React
+- mint.com's Css for styling
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Code Snippet
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+/// this is a form dropdown that adds the currency selected to the api call.
+      <form class="d-flex" role="search" onSubmit={handleSubmit}>
+        <input
+          class="form-control me-2"
+          inputMode="numeric"
+          type="text"
+          placeholder="Amount"
+          aria-label="Search"
+          onChange={handleChange}
+        />
+        <select
+          class="custom-select"
+          id="select"
+          onChange={e => setCurrency(e.target.value)}
+        >
+          <option selected>Currency</option>
+          <option value="USD">US Dollar</option>
+          <option value="EUR">Euro</option>
+          <option value="GBP">British Pounds</option>
+          <option value="AUD">Aussie Dollars</option>
+          <option value="CAD">Canadian Dollars</option>
+          <option value="RUB">Ruble</option>
+          <option value="AUD">AUD</option>
+          <option value="GBP">British Pounds</option>
+        </select>
+        <button className="btn btn-outline-success" type="submit">
+          CONVERT!
+        </button>
+      </form>
+      <ul class="list-group">
+        <Convert money={money} />
+      </ul>
+```
